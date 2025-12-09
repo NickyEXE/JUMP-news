@@ -25,10 +25,10 @@
 
   <body>
       <main>
-      <header>  
+      <a class="header" href="<%= root_path %>">
         <div class="masthead">JUMP News</div>
         <div class="subtitle"><%= Article.random_motto %></div>
-      </header>
+      </a>
       <%= yield %>
     </main>
   </body>

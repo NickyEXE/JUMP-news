@@ -66,8 +66,10 @@ main {
     padding: 2em;
 }
 
-header {
+a.header {
     text-align: center;
+    color: black;
+    text-decoration: none;
 }
 
 div.masthead {
