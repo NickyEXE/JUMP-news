@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_08_211037) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_09_032033) do
   create_table "articles", force: :cascade do |t|
     t.text "blurb"
     t.string "byline"
@@ -19,6 +19,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_08_211037) do
     t.string "fake_created_at"
     t.boolean "published"
     t.string "stub"
+    t.string "thumbnail"
     t.string "title"
     t.datetime "updated_at", null: false
   end

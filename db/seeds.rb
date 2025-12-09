@@ -12,6 +12,8 @@ Article.destroy_all
 
 content = <<-TEXT
 
+<img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinney" />
+
 <p>You know our motto: WE NEED A GOOD LAWYER, FAST.</p>
 
 <p>Are you a lawyer? Can you convincingly play one on TV? Are you someone's cousin Vinny?</p>
@@ -29,7 +31,7 @@ GOSSIP GIRL XOXO</p>
 
 TEXT
 
-Article.find_or_create_by(title: "Request: Are we Breaching our Pantheon Contract?", byline: "Yours Truly, We the People", stub: "legal-request", blurb: "Are you a lawyer? Let us know if we're breaking the law!", content: content, published: true, fake_created_at: "Two days ago")
+Article.find_or_create_by(title: "Request: Are we Breaching our Pantheon Contract?", byline: "Yours Truly, We the People", stub: "legal-request", thumbnail: "/assets/tomei.jpg", blurb: "Are you a lawyer? Let us know if we're breaking the law!", content: content, published: true, fake_created_at: "Two days ago")
 
 content = <<-TEXT
 
@@ -86,9 +88,9 @@ As always, remember our motto: WE NEED A GOOD LAWYER, FAST.
 
 TEXT
 
-blurb = "<p>In the first part of our continuing series on washed up actor and Mayoral candidate Colin Redwing, we tell you the story of how we blew up the Falconwing.</p>"
+blurb = "For real, we did. The first part of our coverage of Colin Redwing's mayoral campaign! Subscribe!"
 
-Article.find_or_create_by!(title: "Birdwatch Part 1: We Blew Up The Falconwing, LOL", byline: "Yours Truly, We the People", stub: "birdwatch-1", blurb: blurb, content: content, published: true, fake_created_at: "One Day Ago")
+Article.find_or_create_by!(title: "Birdwatch Part 1: We Blew Up The Falconwing, LOL", byline: "Yours Truly, We the People", stub: "birdwatch-1", thumbnail: "/assets/turkey.png", blurb: blurb, content: content, published: true, fake_created_at: "One Day Ago")
 
 
 content = <<-TEXT
@@ -129,6 +131,6 @@ blurb = <<-TEXT
 NEW SCOOP: SigTech is creating superheroes in a lab! Learn how Green Tiger's team was labgrown, and how you can demand your own!
 TEXT
 
-Article.find_or_create_by!(title: "Get Your Free Superpower Today!", byline: "Yours Truly, We the People", stub: "free-sigtech-superpowers", blurb: blurb, content: content, published: true, fake_created_at: "One Day Ago")
+Article.find_or_create_by!(title: "Get Your Free Superpower Today!", byline: "Yours Truly, We the People", stub: "free-sigtech-superpowers", thumbnail: "/assets/interocitor.png", blurb: blurb, content: content, published: true, fake_created_at: "One Day Ago")
 
 

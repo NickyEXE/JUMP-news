@@ -1,2 +1,22 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<content class="hp">
+    <div class="hp__headline">
+    <% article = @articles.first %>
+    <a href="<%= article_path(article.stub) %>" class="hp__headline__link">
+            <h1><%= article.title %></h1>
+            <img src="<%= get_asset_path(article.thumbnail) %>" alt="Thumbnail for <%= article.title %>" class="hp__headline__thumbnail" />
+            <p><%= article.blurb %></p>
+        </a>
+    </div>
+
+    <div class="hp__subheadlines">
+        <% @articles.offset(1).each do |article| %>
+            <a href="<%= article_path(article.stub) %>" class="hp__subheadline">
+                <img src="<%= get_asset_path(article.thumbnail) %>" alt="Thumbnail for <%= article.title %>" class="hp__subheadline__thumbnail" />
+                <div class="hp__subheadline_content">
+                    <h2><%= article.title %></h2>
+                    <p><%= article.blurb %></p>
+                </div>
+            </a>
+        <% end %>
+    </div>
+</content>

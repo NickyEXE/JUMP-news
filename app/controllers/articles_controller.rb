@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.where(published: true).order(created_at: :desc)
+    render :index
   end
 
   def show

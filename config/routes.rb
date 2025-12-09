@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "articles/index"
+  root "articles#index"
   get "articles/:stub", to: "articles#show", as: :article
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

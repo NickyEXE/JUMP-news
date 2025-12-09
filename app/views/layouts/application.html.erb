@@ -24,10 +24,12 @@
   </head>
 
   <body>
-    <header>  
-      <div class="masthead">JUMP News</div>
-      <div class="subtitle">Perceptive Minds Blown Dirt Cheap</div>
-    </header>
-    <%= yield %>
+      <main>
+      <header>  
+        <div class="masthead">JUMP News</div>
+        <div class="subtitle"><%= Article.random_motto %></div>
+      </header>
+      <%= yield %>
+    </main>
   </body>
 </html>
