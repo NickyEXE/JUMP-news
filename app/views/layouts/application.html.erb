@@ -24,7 +24,8 @@
   </head>
 
   <body>
-      <main>
+    <main>
+      <nav id="main-nav"></nav>
       <a class="header" href="<%= root_path %>">
         <div class="masthead">JUMP News</div>
         <div class="subtitle"><%= Article.random_motto %></div>
@@ -33,3 +34,20 @@
     </main>
   </body>
 </html>
+
+<script>
+  //# is the admin item in local storage (where memory is stored between pages) equal to "true"
+  const admin = localStorage.getItem("admin") == "true"
+  const firstName = localStorage.getItem("firstName")
+  let navInnerHtml
+
+  if (!firstName){
+    navInnerHtml = `<a href="<%= new_user_path %>">Create an Account</a>`
+  } else if (!admin) {
+    navInnerHtml = `<span class="welcome">Welcome ${firstName}`
+  } else {
+    navInnerHtml = `<span class="welcome">Welcome Admin ${firstName}</span><a href="<%= articles_path %>">See Admin Panel</a>`
+  }
+
+  document.querySelector("#main-nav").innerHTML = navInnerHtml
+</script>

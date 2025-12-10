@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.all
+    render :homepage
+  end
+  def homepage
     @articles = Article.where(published: true).order(created_at: :desc)
-    render :index
+    render :homepage
   end
 
   def show
