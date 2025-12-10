@@ -72,6 +72,17 @@ a.header {
     text-decoration: none;
 }
 
+a.article__back-link {
+    font-family: 'HitMePunk', serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
 div.masthead {
   font-family: 'HitMePunk', serif;
   font-size: 8em;
@@ -237,4 +248,61 @@ content.hp a {
     .hp__subheadline__thumbnail {
         width: 100px;
     }
+}
+
+.album-title {
+  font-family: 'Typewriter', serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.ed-note {
+    background-color: lightgray;
+    font-size: 1em;
+    padding: 2em;
+    border-radius: 20px;
+    margin-bottom: 2em;
+    border: solid darkgray 2px;
+}
+
+.album-score {
+  float: left;
+  background-color: #000000;
+  padding: 1em 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+  border: solid 2px #0000001a;
+  border-radius: 10px;
+  text-align: center;
+  color: #d4c4a4;
+}
+
+.album-score-inner {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25em;
+  font-family: 'Typewriter', serif;
+  justify-content: center;
+}
+
+.album-score__value {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.album-score__out-of {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #666;
+}
+
+.album-score__descriptor {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 0.5em;
+  display: block;
 }

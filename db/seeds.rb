@@ -12,7 +12,7 @@ Article.destroy_all
 
 content = <<-TEXT
 
-<img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinney" />
+<img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinny" />
 
 <p>You know our motto: WE NEED A GOOD LAWYER, FAST.</p>
 
@@ -32,6 +32,80 @@ GOSSIP GIRL XOXO</p>
 TEXT
 
 Article.find_or_create_by(title: "Request: Are we Breaching our Pantheon Contract?", byline: "Yours Truly, We the People", stub: "legal-request", thumbnail: "/assets/tomei.jpg", blurb: "Are you a lawyer? Let us know if we're breaking the law!", content: content, published: true, fake_created_at: "Two days ago")
+
+content = <<-TEXT
+
+<img src="/assets/records.png" alt="Records" />
+<div class="ed-note">
+<p>Ed Note: It Is An Axiom Universally Acknowledged That A Punk Blog Cannot Exist Without A Section For Reviewing Trendy New Pop Albums.</p>
+
+<p>This Despite The Following Apparent Facts: </p>
+<ol>
+<li>That Music Is Among Art Forms Largely The Domain Of Individual Preference, </li>
+<li>That The Act Of Consuming These Albums Takes Roughly The Length Of A Single Episode Of Television, </li>
+<li>That Even A Ten Second Preview Of A Given Song Can Give A Better Sense To The Listener Of Whether They Would Enjoy An Album Than The Writings Of Strangers On The Internet Could.</li>
+</ol>
+
+<p>A Survey Of These Insights And The Continued Popularity Of The Album Review Format Long After The Death Of The Physical Album And The Rise Of A Streaming Era That Has Removed Financial Barriers To Listening To Albums Indicates That The Goal Of An Album Review Should Not Be To Inform The Reader Whether To Listen To The Album.</p>
+
+<p>Likely, Instead, Readers Are Seeking Spicy, Clickable Takes On Albums They've Already Listened To With Quotable Insights Allowing Them To Sound Intelligent While Attempting To Objectively Discuss Topics That Should Rightly Be Relegated To Personal Preference.</p>
+
+<p>With That In Mind, We Here At JUMP News Have Collected A Panel Of Our Writers To Collate Their Opinions And Provide A “score”, Snarkily Pointed In “half-nods”, Including A Decimal Value To Make It Feel More Scientific, Alongside Reviews Of Albums Whose Tracks Are Already Inescapable At Retail Establishments.</p>
+
+<p>We Wash Our Hands Of This.</p>
+<p>Sincerely,<br/>
+Sheena, Editor-in-Chief, JUMP News</p>
+
+</div>
+
+<div class="album-title">Wren’s “Caged: Unlocced (Acoustic)”</div>
+
+<div class="album-score">
+    <div class="album-score-inner">
+        <span class="album-score__value">7.1</span>
+        <span class="album-score__out-of">/10</span>
+    </div>
+    <span class="album-score__descriptor">Half-Nods</span>
+</div>
+
+
+<p>Despite being a mere teenager, it sometimes feels like Wren has loomed in the public zeitgeist since the advent of sound recording. Her frequent rebrands – which started with her character Luna’s seamless pivot from the Regina George of Sea of Tranquility High School in season one of “Gravity, Please”, into the troubled but misunderstood best friend, deuteragonist, and second lead singer of the eponymous high school band – have become as much a feature of her public identity as the personalities she adopts and discards.</p>
+
+<p>For her part, she seems to lean into her seemingly eternal role in the public spotlight with her acoustic review of her corpus, an intimate recording between herself, a Martin OM-28 six string, and a microphone, dissecting hits throughout her career, stripped naked of both the heavy overdrive that defined her early, faux-punk works and her later, production radio-pop sheen.</p>
+
+<p>A confession: We here at JUMP News were prepared to hate the album from the moment we saw its cover: a chiaroscuro photo of Wren’s face in profile, her signature eyeliner perfectly smudged, intentionally invoking Johnny Cash’s final masterpiece album, Hurt.</p>
+
+<p>Indeed, there’s a lot to dislike about this album, and the incongruity of form is on display with her sometimes needling cover of “Prettier When I Lie,” which was already uncomfortable when sung by a thirteen year old Wren over two driving wall-of-noise guitars, and which struggles to translate its multi-part chorus into an acoustic personal melodrama.</p>
+
+<p>But when, at the third chorus, she lets her voice waver over “you’re looking at me, seeing what you want to see”, with a brief hint of self-consciousness, a humorous nod to the futility of the artistic endeavor she’s attempting, you are almost teleported to the quiet after-hours coffee shop she wants you to imagine her in, watching a powerful but unsure performer put her heart into her poetry to a half-interested audience.</p>
+
+<p>The fact that Wren has never performed to an audience of fewer than thousands is beside the point.</p>
+
+<Photo of chair and guitar/>
+
+<p>“Black Lipstick Means Never Having to Say You’re Sorry” will have you banging your head in spite of yourself, as her staccato chorus fits its new acoustic clothing well, and as Wren exhibits a surprising ability to put force into each strum of her guitar. While we won’t swap the original out on our playlists, we anticipate that fans will include both versions on theirs.</p>
+
+<p>Of the acoustic songs on her album’s A-Side, it's the opinion of this publication that only “Swan Song (For Someone Else)” clearly exceeds its original in its acoustic cover. </p>
+
+<p>We would be relieved to see the first, Swedish-produced version relegated to the dust-bin of history after four years of hearing it incessantly in every grocery store, pharmacy, and dentist’s office. But Wren, with her acoustic cover here, transforms “Swan Song” into a naive but nonetheless heartfelt singer-songwriter’s projection of teenage angst and an all-to-relatable scramble for dignity after a loss. It makes us ask why the original version, with its retro millennial whoop that wraps painfully around the brain stem like the ear bug in Wrath of Khan, was ever produced at all.</p>
+
+<p>
+The album does fall apart on its b-side, which drops the acoustic act in favor of a collection of remixes aiming to squeeze some more blood from the rock of her earlier successes, and since it seems Wren didn’t put much effort into these tracks, we won’t put effort into reviewing them.</p>
+
+<p>That is, with one exception: “Prettier When I Lie (DJ BUTTER FACE REMIX)”. Unless you live under one of the aforementioned rocks, you’ve heard it already, and you can’t get it out of your head. DJ BUTTER FACE, a high schooler from Northwood District whose previous discography exists entirely on SoundTime and TikTok, clearly saw zir shot at stardom with the track’s defining sample and took it.</p>
+
+<p>“Prettier When I Lie (DJ BUTTER FACE REMIX)” is a track destined to be played to death at clubs this summer, and then have its corpse fucked on late shows and at Las Culturistas’ next Culture Awards. Enjoy it before you can’t stand it anymore.</p>
+
+<p>This album isn’t likely to attract many new listeners under the age of 45, but fans will appreciate the personal, intimate nature of the album, and parents driving their kids to school will appreciate for once a Wren album where cloying, infectious hooks are replaced with trained singer-songwriter artistry – at least through the first half.</p>
+
+<p>In spite of ourselves and the album’s B-Side, Wren has earned an admirable 7.1 half-nods out of 10, and by virtue of being the first album we reviewed, holds our title of top-reviewed album. We hope in spite of all prior evidence that this dubious honor will stave off some death threats from her tween fans.</p>
+
+TEXT
+
+blurb = "The Vinyl Cuckchair’s staff reviews Wren’s acoustic attempt at a tortured poet rebrand in our inaugural album review."
+
+Article.find_or_create_by!(title: "The Vinyl Cuckchair: Wren’s “Caged: Unlocced (Acoustic)”", byline: "The Vinyl Cuckchair Staff – JUMP News", stub: "vc-caged", thumbnail: "/assets/records.png", blurb: blurb, content: content, published: true, fake_created_at: "Two Days Ago")
+
 
 content = <<-TEXT
 
@@ -62,7 +136,7 @@ content = <<-TEXT
 
 <img src="/assets/joyriding.png" alt="But Officer, how could 'Joyriding' be bad?" />
 
-<p>Imagine you’re on your way to probable certain death (Y.T. note: Shut up, Ed.!) [Ed. You’re fired], driving a sick ass sports car at the apocalypse, when who should show up but a washed up actor in his wildly expensive jet? And imagine he announces himself by ripping off the hood of <s>your</s> his vehicle with his plane’s literal talons??</p>
+<p>Imagine you’re on your way to probable certain death (Y.T. note: Shut up, Ed.!) [Ed. You’re Fired], driving a sick ass sports car at the apocalypse, when who should show up but a washed up actor in his wildly expensive jet? And imagine he announces himself by ripping off the hood of <s>your</s> his vehicle with his plane’s literal talons??</p>
 
 <p>Now I know you don’t come here for juicy gossip, so we’ll TL;DR and say the Falconwing had a weak spot (supervillains eat your heart out), and our buddy who trained with him knew it, so we shot this bad boy down, but that’s where it got MESSY for us.</p>
 
@@ -98,7 +172,7 @@ content = <<-TEXT
 <p>Here's a bargain for all you deal hunters: <b>Free Superpowers.</b></p>
 <p>Or at least, that's the headline we're going with: you gotta get clicks. But would you believe us if we told you you've already paid for your superpowers?</p>
 <p>SigTech takes billions of dollars in government contracts and tax breaks. What do they do with that? Per our anonymous superpowered source:</p> 
-<p><b>SigTech is using that money to give people superpowers!!!</b> (Ed. Note - MOVE THIS TO TOP, YOU'RE BURYING THE LEDE UNDER YOUR BULLSHIT) [Y.T. Note - Oh, Ed. What would we do without you?]</p>
+<p><b>SigTech is using that money to give people superpowers!!!</b> (Ed. Note - Move This To The Top, You Are Burying The Lede Underneath Juvenile Bullshit) [Y.T. Note - Oh, Ed. What would we do without you?]</p>
 <img src="/assets/interocitor.png" alt="We have the technology!" />
 <p>In fact, you or someone you know may have been saved by taxpayer-funded superpowers, with an anonymous superpowered source sharing directly with this publication that <b>Green Tiger’s new proteges were all supafied in SigTech Labs!</b></p>
 <p>Don't believe us? See if they throw a lawsuit at us!</p>
