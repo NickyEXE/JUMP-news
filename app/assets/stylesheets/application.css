@@ -438,3 +438,9 @@ table {
   padding: 0.5em 1em;
   border-radius: 5px;
 }
+
+.publish-button {
+  padding: 0.2em;
+  font-size: .8em;
+  margin-top: none;
+}

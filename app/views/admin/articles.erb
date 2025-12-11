@@ -30,8 +30,8 @@
             <% end %>
         </td>
         <td>
-            <% unless article.published %>
-                <a href="/articles/<%= article.id %>/publish">Click to Publish</a>
+             <% unless article.published %>
+                <%= button_to 'Click to Publish', "/articles/#{article.id}/publish", method: :post, class: 'publish-button', data: { turbo: false } %>
             <% end %>
         </td>
     </tr>

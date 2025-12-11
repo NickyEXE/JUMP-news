@@ -48,7 +48,7 @@
   } else if (!admin) {
     navInnerHtml = `<span class="welcome">Welcome ${firstName}</span><button id="edit-user-button">Edit Profile</button><button id="logout-button">Logout</button>`
   } else {
-    navInnerHtml = `<span class="welcome">Welcome Admin ${firstName}</span><a href="<%= articles_path %>">See Admin Panel</a>`
+    navInnerHtml = `<span class="welcome">Welcome Admin ${firstName}</span><a href="<%= admin_path %>">See Admin Panel</a>`
   }
 
   document.querySelector("#main-nav").innerHTML = navInnerHtml

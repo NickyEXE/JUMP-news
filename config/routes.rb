@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/admin", to: "admin#admin", as: :admin
   get "/admin/articles", to: "admin#articles", as: :admin_articles
   get "/admin/users", to: "admin#users", as: :admin_users
-  get "/articles/:id/publish", to: "articles#publish", as: :publish_article
+  post "/articles/:id/publish", to: "articles#publish", as: :publish_article
   get "articles/:stub", to: "articles#show", as: :article
   get "articles", to: "articles#index", as: :articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.where(published: true).order(created_at: :desc)
     render :homepage
   end
 
@@ -15,9 +15,10 @@ class ArticlesController < ApplicationController
   end
 
   def publish
+    puts "Publishing article with ID #{params[:id]}"
     @article = Article.find(params[:id])
     @article.update(published: true)
-    redirect_to admin_articles_path, notice: "Article published."
+    redirect_to admin_articles_path, notice: "Article published.", status: :see_other
   end
 
   def show
