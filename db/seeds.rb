@@ -10,6 +10,19 @@
 
 Article.destroy_all
 
+420.times do |i|
+    dotcom = ["nexus", "guard", "virtue", "sig", "panth"]
+user = User.find_or_create_by!(
+    first_name: Faker::Name.first_name, 
+    last_name: Faker::Name.last_name, 
+    email: Faker::Internet.email.gsub("example", dotcom.sample).gsub("test", dotcom.sample),
+    admin: false,
+    verified: false,
+)
+end
+
+User.create(first_name: "JUMP", last_name: "News", email: "contact@jumpnews.com", admin: true, verified: true)
+
 content = <<-TEXT
 
 <img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinny" />

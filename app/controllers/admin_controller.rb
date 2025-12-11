@@ -9,7 +9,7 @@ class AdminController < ApplicationController
     end
 
     def users
-        @users = User.all.order(created_at: :desc)
+        @users = User.all.order(verified: :desc, created_at: :desc)
         render :users
     end
 end
