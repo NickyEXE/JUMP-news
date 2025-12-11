@@ -1,0 +1,12 @@
+<%= content_for :title, "Edit user" %>
+
+<div class="user-form-container">
+  <center>
+    <h1>Change your name or email?</h1>
+    <h2>This sort of feature makes a website complete.</h2>
+  </center>
+
+  <%= render 'form', user: @user %>
+</div>
+
+<div class="admin-status">Admin: <%= @user.admin? %></div>

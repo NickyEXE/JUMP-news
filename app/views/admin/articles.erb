@@ -1,0 +1,39 @@
+<script>
+    if (!localStorage.getItem('admin') == "true") {
+        alert("You are not logged in as admin.");
+        window.location.href = "/";
+    }
+</script>
+
+<button><%= link_to 'Users Admin Dashboard', admin_users_path %></button>
+
+<h1>Articles Admin Dashboard</h1>
+
+<p>Warning: Publishing an article will send it as an email to all subscribers.</p>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Last Edited</th>
+        <th>Published</th>
+        <th>Actions</th>
+    </tr>
+    <% @articles.each do |article| %>
+    <tr>
+        <td><a href="/articles/<%= article.stub %>"><%= article.title %></a></td>
+        <td><%= article.fake_created_at %></td>
+        <td>
+            <% if article.published %>
+                Yes
+            <% else %>
+                No
+            <% end %>
+        </td>
+        <td>
+            <% unless article.published %>
+                <a href="/articles/<%= article.id %>/publish">Click to Publish</a>
+            <% end %>
+        </td>
+    </tr>
+    <% end %>
+</table>

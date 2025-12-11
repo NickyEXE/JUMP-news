@@ -21,6 +21,25 @@ class UsersController < ApplicationController
     end
   end
 
+
+  def edit
+    @user = User.find_by(id: params[:id])
+    if @user
+      render :edit
+    else
+      render json: { errors: "User not found" }, status: :not_found
+    end
+  end
+
+  def update 
+    @user = User.find_by(id: params[:id])
+    if @user.update(user_params)
+      render json: @user
+    else
+      render json: { errors: @user.errors.full_messages.to_sentence }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
