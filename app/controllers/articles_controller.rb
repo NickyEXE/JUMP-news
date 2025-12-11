@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.where(published: true).order(created_at: :desc)
-    render :homepage
+    render :print_edition
   end
 
   def admin 

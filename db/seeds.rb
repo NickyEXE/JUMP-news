@@ -48,22 +48,17 @@ Article.find_or_create_by(title: "Request: Are we Breaching our Pantheon Contrac
 
 content = <<-TEXT
 
-<img src="/assets/records.png" alt="Records" />
+<img src="/assets/records.png" alt="Records" style="max-height:220px;" />
 <div class="ed-note">
 <p>Ed Note: It Is An Axiom Universally Acknowledged That A Punk Blog Cannot Exist Without A Section For Reviewing Trendy New Pop Albums.</p>
 
-<p>This Despite The Following Apparent Facts: </p>
-<ol>
-<li>That Music Is Among Art Forms Largely The Domain Of Individual Preference, </li>
-<li>That The Act Of Consuming These Albums Takes Roughly The Length Of A Single Episode Of Television, </li>
-<li>That Even A Ten Second Preview Of A Given Song Can Give A Better Sense To The Listener Of Whether They Would Enjoy An Album Than The Writings Of Strangers On The Internet Could.</li>
-</ol>
+<p>This Despite Music Being Among Art Forms Notable As A Domain Of Individual Preference, And Sampling A Song In The Streaming Age Takes Roughly 10 Seconds.</p>
 
-<p>A Survey Of These Insights And The Continued Popularity Of The Album Review Format Long After The Death Of The Physical Album And The Rise Of A Streaming Era That Has Removed Financial Barriers To Listening To Albums Indicates That The Goal Of An Album Review Should Not Be To Inform The Reader Whether To Listen To The Album.</p>
+<p>The Continued Popularity Of The Album Review Format Long After The Death Of The Physical Album And The Rise Of A Streaming Era That Has Removed Financial Barriers To Listening To Albums Indicates That The Goal Of An Album Review Should Not Be To Inform The Reader Whether To Listen To The Album.</p>
 
-<p>Likely, Instead, Readers Are Seeking Spicy, Clickable Takes On Albums They've Already Listened To With Quotable Insights Allowing Them To Sound Intelligent While Attempting To Objectively Discuss Topics That Should Rightly Be Relegated To Personal Preference.</p>
+<p>Likely, Instead, Readers Are Seeking Spicy, Clickable Takes On Albums They've Already Listened To With Quotable Insights Allowing Them To Sound Intelligent While Attempting To Objectively Discuss Topics Of Personal Preference.</p>
 
-<p>With That In Mind, We Here At JUMP News Have Collected A Panel Of Our Writers To Collate Their Opinions And Provide A “score”, Snarkily Pointed In “half-nods”, Including A Decimal Value To Make It Feel More Scientific, Alongside Reviews Of Albums Whose Tracks Are Already Inescapable At Retail Establishments.</p>
+<p>With That In Mind, We Here At JUMP News Have Collected A Panel Of Our Writers To Collate Their Opinions And Provide A “score”, Snarkily Pointed In “Half-Nods”, Including A Decimal Value To Make It Feel More Scientific, Alongside Reviews Of Albums Whose Tracks Are Already Inescapable At Retail Establishments.</p>
 
 <p>We Wash Our Hands Of This.</p>
 <p>Sincerely,<br/>
@@ -71,7 +66,7 @@ Sheena, Editor-in-Chief, JUMP News</p>
 
 </div>
 
-<div class="album-title">Wren’s “Caged: Unlocced (Acoustic)”</div>
+<div class="article__title">Wren’s “Caged: Unlocced (Acoustic)”</div>
 
 <div class="album-score">
     <div class="album-score-inner">
@@ -104,7 +99,7 @@ Sheena, Editor-in-Chief, JUMP News</p>
 
 <p>We would be relieved to see the first, Swedish-produced version relegated to the dust-bin of history after four years of hearing it incessantly in every grocery store, pharmacy, and dentist’s office. But Wren, with her acoustic cover here, transforms “Swan Song” into a naive but nonetheless heartfelt singer-songwriter’s projection of teenage angst and an all-to-relatable scramble for dignity after a loss. It makes us ask why the original version, with its retro millennial whoop that wraps painfully around the brain stem like the ear bug in Wrath of Khan, was ever produced at all.</p>
 
-<img src="/assets/max_martin.png" alt="A Swede accepting his award for best production for 'Nevermore'"/>
+<img src="/assets/max_martin.png" class="page-break-before" alt="A Swede accepting his award for best production for 'Nevermore'"/>
 
 <p>
 The album does fall apart on its b-side, which drops the acoustic act in favor of a collection of remixes aiming to squeeze some more blood from the rock of her earlier successes, and since it seems Wren didn’t put much effort into these tracks, we won’t put effort into reviewing them.</p>
@@ -163,7 +158,7 @@ content = <<-TEXT
 
 <p>You know what we say here at JUMP news about the best way to end a lecture:</p>
  
-<img src="/assets/molotov.png" alt="Any time I had a problem and I threw a Molotov cocktail... Boom, right away I had a different problem."/>
+<img src="/assets/molotov.png" class="page-break-before" alt="Any time I had a problem and I threw a Molotov cocktail... Boom, right away I had a different problem."/>
 
 <p>So we snuck behind him and hit the self-destruct button on his downed jet. Here’s a tip for Falcon: If you’re gonna add a self-destruct button to your plane in the first act, it’s gonna be pressed in the third.</p>
 
