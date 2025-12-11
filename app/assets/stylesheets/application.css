@@ -313,3 +313,16 @@ content.hp a {
   padding-top: 1em;
 
 }
+
+#main-nav a {
+    font-family: 'Typewriter', serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    background-color: #d4c4a4;
+    padding: 0.5em 1em;
+    border: solid 2px #0000001a;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.2s;
+}

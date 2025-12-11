@@ -44,10 +44,18 @@
   if (!firstName){
     navInnerHtml = `<a href="<%= new_user_path %>">Create an Account</a>`
   } else if (!admin) {
-    navInnerHtml = `<span class="welcome">Welcome ${firstName}`
+    navInnerHtml = `<span class="welcome">Welcome ${firstName}</span><button id="logout-button">Logout</button>`
   } else {
     navInnerHtml = `<span class="welcome">Welcome Admin ${firstName}</span><a href="<%= articles_path %>">See Admin Panel</a>`
   }
 
   document.querySelector("#main-nav").innerHTML = navInnerHtml
+  const logoutButton = document.getElementById("logout-button")
+  if (logoutButton){
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("firstName")
+      localStorage.removeItem("admin")
+      window.location.href = "/";
+    })
+  }
 </script>
