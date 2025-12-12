@@ -114,7 +114,7 @@
     <div class="article-byline">By <%= @article.byline %> - <%= @article.fake_created_at %></div>
     
     <% if @article.thumbnail.present? %>
-      <img src="<%= root_url.chomp('/') + asset_path(@article.thumbnail) %>" class="article-thumbnail" alt="<%= @article.title %>">
+      <img src="<%= email_image_url(@article.thumbnail) %>" class="article-thumbnail" alt="<%= @article.title %>">
     <% end %>
     
     <div class="article-blurb">
