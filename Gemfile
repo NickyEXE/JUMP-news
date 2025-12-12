@@ -53,6 +53,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
   gem "byebug"
+  gem "dotenv-rails", "~> 3.2"
 end
 
 group :development do
@@ -72,3 +73,5 @@ end
 gem "faker", "~> 3.5"
 
 gem "bcrypt", "~> 3.1"
+
+
