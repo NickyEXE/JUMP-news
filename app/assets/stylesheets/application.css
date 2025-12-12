@@ -383,13 +383,20 @@ content.hp a {
   box-sizing: border-box;
 }
 
+a.admin-link {
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: 1em auto;
+}
+
 #user-form input[type="text"]:focus,
 #user-form input[type="email"]:focus {
   outline: none;
   border-color: #000;
 }
 
-#user-form input[type="submit"], button, #main-nav > a, .welcome {
+#user-form input[type="submit"], button, #main-nav > a, .welcome, .admin-link {
   width: 100%;
   padding: 1em;
   font-family: 'Typewriter', serif;
