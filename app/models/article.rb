@@ -27,7 +27,7 @@ class Article < ApplicationRecord
 
     def send_publication_emails
         User.where(verified: true).find_each do |user|
-            ArticleMailer.new_article_published(self, user.email).deliver_now
+            SendArticleEmailJob.perform_later(self.id, user.email)
         end
     end
 end
