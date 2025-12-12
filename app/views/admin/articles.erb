@@ -10,19 +10,17 @@
 <table>
     <tr>
         <th>Title</th>
-        <th>Last Edited</th>
-        <th>Published</th>
+        <th>Status</th>
         <th>Actions</th>
     </tr>
     <% @articles.each do |article| %>
     <tr>
         <td><a href="/articles/<%= article.stub %>"><%= article.title %></a></td>
-        <td><%= article.fake_created_at %></td>
         <td>
             <% if article.published %>
-                Yes
+                Published
             <% else %>
-                No
+                Draft
             <% end %>
         </td>
         <td>

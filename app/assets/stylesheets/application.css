@@ -617,3 +617,13 @@ table {
   max-height: 10.5in;
   margin: 1in auto
 }
+
+table td, th {
+  min-height: 2em;
+  height: 2em;
+  padding: 0.5em;
+  border-bottom: 1px solid #0000005e;
+}
+table td * {
+  margin: auto 0;
+}
