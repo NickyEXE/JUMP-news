@@ -9,6 +9,7 @@
 #   end
 
 Article.destroy_all
+User.destroy_all
 
 15.times do |i|
     dotcom = ["nexus", "guard", "virtue", "sig", "panth"]
