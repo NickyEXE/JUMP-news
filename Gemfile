@@ -67,3 +67,5 @@ group :test do
 end
 
 gem "faker", "~> 3.5"
+
+gem "bcrypt", "~> 3.1"

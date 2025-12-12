@@ -44,11 +44,11 @@
   let navInnerHtml
 
   if (!id){
-    navInnerHtml = `<a href="<%= new_user_path %>">Create an Account</a>`
+    navInnerHtml = `<button><a href="<%= new_user_path %>">Create an Account</a></button>`
   } else if (!admin) {
     navInnerHtml = `<span class="welcome">Welcome ${firstName}</span><button id="edit-user-button">Edit Profile</button><button id="logout-button">Logout</button>`
   } else {
-    navInnerHtml = `<span class="welcome">Welcome Admin ${firstName}</span><a href="<%= admin_path %>">See Admin Panel</a>`
+    navInnerHtml = `<button><a href="<%= admin_path %>">See Admin Panel</a></button><button id="edit-user-button">Edit Profile</button><button id="logout-button">Logout</button>`
   }
 
   document.querySelector("#main-nav").innerHTML = navInnerHtml

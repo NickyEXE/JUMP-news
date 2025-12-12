@@ -309,7 +309,7 @@ content.hp a {
 }
 
 #main-nav {
-  text-align: right;
+  text-align: center;
   margin-bottom: 2em;
   padding-top: 1em;
 }
@@ -367,7 +367,7 @@ content.hp a {
   border-color: #000;
 }
 
-#user-form input[type="submit"], button {
+#user-form input[type="submit"], button, .welcome {
   width: 100%;
   padding: 1em;
   font-family: 'Typewriter', serif;
@@ -435,7 +435,6 @@ table {
 
 #main-nav * {
   border: solid 1px black;
-  padding: 0.5em 1em;
   border-radius: 5px;
 }
 
