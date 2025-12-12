@@ -75,3 +75,5 @@ gem "faker", "~> 3.5"
 gem "bcrypt", "~> 3.1"
 
 
+
+gem "mailgun-ruby", "~> 1.4"

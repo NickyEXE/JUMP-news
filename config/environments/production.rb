@@ -61,18 +61,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "example.com" }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via bin/rails credentials:edit.
-config.action_mailer.delivery_method = :smtp
-
-config.action_mailer.smtp_settings = {
-  address:              "smtp.mailgun.org",
-  port:                 2525,  # or 587
-  domain:               ENV['MAILGUN_DOMAIN'],
-  user_name:            ENV['MAILGUN_SMTP_LOGIN'],
-  password:             ENV['MAILGUN_SMTP_PASSWORD'],
-  authentication:       :plain,
-  enable_starttls_auto: true,
-  open_timeout:         10,
-  read_timeout:         10
+config.action_mailer.delivery_method = :mailgun
+config.action_mailer.mailgun_settings = {
+  api_key: ENV['MAILGUN_API_KEY'],
+  domain: ENV['MAILGUN_DOMAIN']
 }
 
 config.action_mailer.default_url_options = {
