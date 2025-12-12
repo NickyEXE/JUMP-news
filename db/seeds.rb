@@ -10,19 +10,20 @@
 
 Article.destroy_all
 
-420.times do |i|
+15.times do |i|
     dotcom = ["nexus", "guard", "virtue", "sig", "panth"]
-user = User.find_or_create_by!(
-    first_name: Faker::Name.first_name, 
-    last_name: Faker::Name.last_name, 
-    email: Faker::Internet.email.gsub("example", dotcom.sample).gsub("test", dotcom.sample),
-    admin: false,
-    verified: false,
-)
+    user = User.new(
+        first_name: Faker::Name.first_name, 
+        last_name: Faker::Name.last_name, 
+        email: Faker::Internet.email.gsub("example", dotcom.sample).gsub("test", dotcom.sample),
+        admin: false,
+        verified: false,
+        password: "password",
+    )
+    user.save(validate: false)
 end
 
-User.create(first_name: "JUMP", last_name: "News", email: "contact@jumpnews.com", admin: true, verified: true)
-
+User.create(first_name: "JUMP", last_name: "News", email: "contact@jumpnews.com", admin: true, verified: true, password: "up up down down left right left right b a start")
 content = <<-TEXT
 
 <img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinny" />
@@ -220,3 +221,50 @@ TEXT
 Article.find_or_create_by!(title: "Get Your Free Superpower Today!", byline: "Yours Truly, We the People", stub: "free-sigtech-superpowers", thumbnail: "/assets/interocitor.png", blurb: blurb, content: content, published: true, fake_created_at: "One Day Ago")
 
 
+content = <<-TEXT
+
+<img src="/assets/jumbotron.png" alt="Venus caught with Himbo! Killjoy heartbroken!" />
+<p>Do you like seeing grainy photos of Venus Fly Trap macking up against a Himbo and we're not just calling him that? Four-hundred thousand upspandexes on CapeWatch seem to think you're not alone.</p>
+
+<p>But one person is alone tonight, and that's Killjoy. The dead former Starling resurrected into a brainwashed killing machine and now self-proclaimed leader of the group that so recently saved the world from the Cold Night is hot off the heels of a relationship with Venus Fly Trap that lasted the lifespan of a fly.</p>
+
+<p>With that in mind, let's eulogize their three day long relationship.</p>
+
+<p>We must begin at the beginning: A snowy night (yep, that one) on the hood of the Falcon’s stolen sports car, which is pretty loaded for Killjoy, but if you think he's the one bringing the most daddy issues into this relationship, buckle your seatbelts.</p>
+
+<p>So</p> 
+<ol>
+<li>Make out on daddy’s car</li>
+<li>Save the world</li>
+<li>Define the relationship</li>
+</ol>
+
+<p>Seems like a recipe for success, right?</p>
+
+<img src="/assets/speed.png" alt="From Speed: Reeves: I'v heard relationships based on intense circumstances never work. Bullock: Okay, we'll have to base it on sex then." />
+
+<p>Here's some gossip: They never consummated the affair. Should have listened to the Wildcat, lovebirds!</p>
+
+<p>After saving the world, the Pantheon gave Killjoy’s team, now known as T-Squad, a mandatory vacation to the Astoundosphere, where Venus somehow managed to find a way to relive her father’s death in a VR Arcade, to which we say: not-so-Brightmind??</p>
+
+Venus lost control of her powers, forcing a standoff between the T-Squad (where “T” clearly stands for Trauma), Astoundosphere security, and Green Tiger’s new cubs.
+
+<p>This confrontation ended when Kitty Crash ripped a new asshole in the Astoundosphere’s ceiling, baffling everyone and showing that despite Kitty’s rejecting of her role as ender of the world (oops, did we say that??), she can still find herself a hole wherever she wants.</p>
+
+<p>A member of the Trauma Squad tried to calm Venus down by, get this, producing her still living supposedly-dead dad. Readers: This did not work.</p>
+
+<p>Have some sympathy for Venus here: saving the world is stressful. So is your mom finding out you're a superhero from watching the news. So is realizing that your grade on an English essay will never be important again.</p>
+
+<p>Whatever caused Venus to snap, Killjoy, who is just finding out about human emotions for the first time, was not equipped to deal with it. His suggestions for his new girlfriend as her life was ripped out from under her like a rug? “Babe, it helps to run it out.”</p>
+
+<p>She dumped him on the spot, and that's where we had left off for the last week, before last night, when she was spotted on CapeWatch going fully PDA on Himbo, to which we say: GIRL, GET IT. RUN FROM THOSE EMOTIONS!</p>
+
+<img src="/assets/running.png" alt="We hear running helps." />
+
+<p>Fortunately to our rubbernecking fans, two carjackers were there on the scene as involuntary witnesses when Killjoy saw the images of Venus’s rebound on social media, and both corroborated that our favorite fledgling turned fledgling poet said “You can't put a steak on a wound through the heart.”</p>
+
+TEXT
+
+blurb = "The inside scoop on the photos that took over CapeWatch last night, documenting Killjoy and Venus Fly Trap's blink-and-you'll-miss-it love story."
+
+Article.find_or_create_by!(title: "Killjoy Joyless After Venus Traps Himbo", byline: "Yours Truly, We the People", stub: "killjoy-venus-breakup", thumbnail: "/assets/jumbotron.png", blurb: blurb, content: content, published: false, fake_created_at: "Just Now")
