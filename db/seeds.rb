@@ -24,7 +24,7 @@ User.destroy_all
     user.save(validate: false)
 end
 
-User.create(first_name: "JUMP", last_name: "News", email: "contact@jumpnews.com", admin: true, verified: true, password: "up up down down left right left right b a start")
+User.create(first_name: "JUMP", last_name: "News", email: "dovern42@gmail.com", admin: true, verified: true, password: "Cheese")
 content = <<-TEXT
 
 <img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinny" />

@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     puts "Publishing article with ID #{params[:id]}"
     @article = Article.find(params[:id])
     @article.update(published: true)
-    redirect_to admin_articles_path, notice: "Article published.", status: :see_other
+    redirect_to admin_articles_path, notice: "Article published and emails sent!", status: :see_other
   end
 
   def show

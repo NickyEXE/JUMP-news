@@ -61,13 +61,22 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "example.com" }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via bin/rails credentials:edit.
-  # config.action_mailer.smtp_settings = {
-  #   user_name: Rails.application.credentials.dig(:smtp, :user_name),
-  #   password: Rails.application.credentials.dig(:smtp, :password),
-  #   address: "smtp.example.com",
-  #   port: 587,
-  #   authentication: :plain
-  # }
+config.action_mailer.delivery_method = :smtp
+
+config.action_mailer.smtp_settings = {
+  address:              "smtp.mailgun.org",
+  port:                 587,
+  domain:               Rails.application.credentials.mailgun_domain,
+  user_name:            Rails.application.credentials.mailgun_smtp_login,
+  password:             Rails.application.credentials.mailgun_smtp_password,
+  authentication:       :plain,
+  enable_starttls_auto: true
+}
+
+config.action_mailer.default_url_options = {
+  host: "jump-news-production.up.railway.app",
+  protocol: "https"
+}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

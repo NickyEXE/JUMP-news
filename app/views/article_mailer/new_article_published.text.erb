@@ -1,0 +1,9 @@
+JUMP News
+<%= Article.random_motto %>
+
+<%= @article.title %>
+By <%= @article.byline %> - <%= @article.fake_created_at %>
+
+<%= @blurb.gsub(/<\/?[^>]*>/, '') %>
+
+Get the full scoop: <%= article_url(@article) %>

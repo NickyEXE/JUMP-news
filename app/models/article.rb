@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
+    after_update :send_publication_emails, if: :just_published?
 
     def self.mottos
     [
@@ -16,5 +17,17 @@ class Article < ApplicationRecord
 
     def self.random_motto
         mottos.sample
+    end
+
+    private
+
+    def just_published?
+        saved_change_to_published? && published?
+    end
+
+    def send_publication_emails
+        User.where(verified: true).find_each do |user|
+            ArticleMailer.new_article_published(self, user.email).deliver_now
+        end
     end
 end
