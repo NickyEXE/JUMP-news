@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, only: [:new, :create, :edit, :update]
   root "articles#homepage"
   get "/admin", to: "admin#admin", as: :admin
+  get "/users/login", to: "users#login", as: :login
+  post "/users/authenticate", to: "users#authenticate", as: :authenticate_user
   get "/admin/articles", to: "admin#articles", as: :admin_articles
   get "/admin/users", to: "admin#users", as: :admin_users
   post "/articles/:id/publish", to: "articles#publish", as: :publish_article

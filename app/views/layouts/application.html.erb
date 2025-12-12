@@ -23,13 +23,22 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="<%= content_for(:body_class) %>">
+  <body class="<%= content_for(:body_class) %>" data-turbo="false">
     <main>
       <nav id="main-nav" class="no-print"></nav>
       <a class="header" href="<%= root_path %>">
         <div class="masthead">JUMP News</div>
         <div class="subtitle"><%= Article.random_motto %></div>
       </a>
+      
+      <% if notice %>
+        <div class="flash notice"><%= notice %></div>
+      <% end %>
+      
+      <% if alert %>
+        <div class="flash alert"><%= alert %></div>
+      <% end %>
+      
       <%= yield %>
     </main>
   </body>
@@ -44,11 +53,11 @@
   let navInnerHtml
 
   if (!id){
-    navInnerHtml = `<button><a href="<%= new_user_path %>">Create an Account</a></button>`
+    navInnerHtml = `<a href="<%= new_user_path %>">Create an Account</a><a href="<%= login_path %>">Login</a>`
   } else if (!admin) {
-    navInnerHtml = `<span class="welcome">Welcome ${firstName}</span><button id="edit-user-button">Edit Profile</button><button id="logout-button">Logout</button>`
+    navInnerHtml = `<a href="/" class="welcome">Welcome ${firstName}</a><a href="/users/${id}/edit">Edit Profile</a><button id="logout-button">Logout</button>`
   } else {
-    navInnerHtml = `<button><a href="<%= admin_path %>">See Admin Panel</a></button><button id="edit-user-button">Edit Profile</button><button id="logout-button">Logout</button>`
+    navInnerHtml = `<a href="<%= admin_path %>">See Admin Panel</a><a href="/users/${id}/edit">Edit Profile</a><button id="logout-button">Logout</button>`
   }
 
   document.querySelector("#main-nav").innerHTML = navInnerHtml

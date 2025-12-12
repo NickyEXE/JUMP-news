@@ -23,6 +23,10 @@
     <%= form.label :email %>
     <%= form.email_field :email %>
   </div>
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
   <%= form.hidden_field :admin, value: false%>
 
   <div>
@@ -31,49 +35,4 @@
 <% end %>
 
 <br>
-
-<script>
-  function handleLoginResponse(data){
-    const firstName = data.first_name
-    const admin = data.admin 
-    //# "true" / "false"
-    localStorage.setItem("firstName", firstName)
-    //# check with localStorage.getItem("firstName")
-    localStorage .setItem("id", data.id)
-    localStorage.setItem("admin", admin)
-    window.location.href = "/";
-  }
-</script>
-
-<script>
-  document.getElementById('user-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-    
-    try {
-      const response = await fetch(e.target.action, {
-        method: e.target.method,
-        body: formData,
-        headers: {
-          'X-CSRF-Token': document.querySelector('[name="csrf-token"]').content,
-          'Accept': 'application/json'
-        }
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        handleLoginResponse(data)
-      }
-      else {
-        console.error('Error:', data);
-        alert('There was an error submitting the form');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('There was an error submitting the form');
-    }
-  });
-</script>
 

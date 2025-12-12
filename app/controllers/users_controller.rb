@@ -7,12 +7,26 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def login
+    @user = User.new
+  end
+
+  def authenticate
+    @user = User.find_by(email: params[:user][:email])
+    if @user&.authenticate(params[:user][:password])
+      render json: @user
+    else
+      flash.now[:alert] = "Invalid email or password."
+      render json: { errors: "Invalid email or password." }, status: :unprocessable_entity
+    end
+  end
+
   def create
     @user = User.find_by(email: params[:user][:email])
     if @user
       @user.update(user_params)
     else
-      @user = User.create(user_params)
+      @user = User.create(user_params.merge(verified: true))
     end
     if @user.valid?
       render json: @user
@@ -48,6 +62,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :admin)
+      params.require(:user).permit(:first_name, :last_name, :email, :admin, :password)
     end
 end

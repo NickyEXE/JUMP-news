@@ -60,6 +60,27 @@ body {
     font-family: 'Typewriter', serif;
 }
 
+.flash {
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 4px;
+    font-family: 'Typewriter', serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.flash.notice {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    color: #155724;
+}
+
+.flash.alert {
+    background-color: #f8d7da;
+    border: 2px solid #dc3545;
+    color: #721c24;
+}
+
 main {
     background-color: #e4daca;
     max-width: 720px;
@@ -349,7 +370,8 @@ content.hp a {
 }
 
 #user-form input[type="text"],
-#user-form input[type="email"] {
+#user-form input[type="email"],
+#user-form input[type="password"] {
   width: 100%;
   padding: 0.75em;
   font-family: 'Typewriter', serif;
@@ -367,7 +389,7 @@ content.hp a {
   border-color: #000;
 }
 
-#user-form input[type="submit"], button, .welcome {
+#user-form input[type="submit"], button, #main-nav > a, .welcome {
   width: 100%;
   padding: 1em;
   font-family: 'Typewriter', serif;
@@ -375,6 +397,7 @@ content.hp a {
   font-weight: 700;
   background-color: #000;
   color: #e4daca;
+  text-decoration: none;
   border: 2px solid #000;
   border-radius: 10px;
   cursor: pointer;

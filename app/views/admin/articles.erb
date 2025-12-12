@@ -1,9 +1,5 @@
-<script>
-    if (!localStorage.getItem('admin') == "true") {
-        alert("You are not logged in as admin.");
-        window.location.href = "/";
-    }
-</script>
+
+<%= render 'authenticate' %>
 
 <button><%= link_to 'Users Admin Dashboard', admin_users_path %></button>
 
