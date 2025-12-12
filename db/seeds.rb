@@ -99,7 +99,7 @@ Sheena, Editor-in-Chief, JUMP News</p>
 
 <p>We would be relieved to see the first, Swedish-produced version relegated to the dust-bin of history after four years of hearing it incessantly in every grocery store, pharmacy, and dentist’s office. But Wren, with her acoustic cover here, transforms “Swan Song” into a naive but nonetheless heartfelt singer-songwriter’s projection of teenage angst and an all-to-relatable scramble for dignity after a loss. It makes us ask why the original version, with its retro millennial whoop that wraps painfully around the brain stem like the ear bug in Wrath of Khan, was ever produced at all.</p>
 
-<img src="/assets/max_martin.png" class="page-break-before" alt="A Swede accepting his award for best production for 'Nevermore'"/>
+<img src="/assets/max_martin.png" alt="A Swede accepting his award for best production for 'Nevermore'"/>
 
 <p>
 The album does fall apart on its b-side, which drops the acoustic act in favor of a collection of remixes aiming to squeeze some more blood from the rock of her earlier successes, and since it seems Wren didn’t put much effort into these tracks, we won’t put effort into reviewing them.</p>
@@ -158,7 +158,7 @@ content = <<-TEXT
 
 <p>You know what we say here at JUMP news about the best way to end a lecture:</p>
  
-<img src="/assets/molotov.png" class="page-break-before" alt="Any time I had a problem and I threw a Molotov cocktail... Boom, right away I had a different problem."/>
+<img src="/assets/molotov.png" alt="Any time I had a problem and I threw a Molotov cocktail... Boom, right away I had a different problem."/>
 
 <p>So we snuck behind him and hit the self-destruct button on his downed jet. Here’s a tip for Falcon: If you’re gonna add a self-destruct button to your plane in the first act, it’s gonna be pressed in the third.</p>
 
