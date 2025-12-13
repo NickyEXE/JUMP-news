@@ -11,7 +11,7 @@
 Article.destroy_all
 User.destroy_all
 
-15.times do |i|
+69.times do |i|
     dotcom = ["nexus", "guard", "virtue", "sig", "panth"]
     user = User.new(
         first_name: Faker::Name.first_name, 
@@ -25,6 +25,19 @@ User.destroy_all
 end
 
 User.create(first_name: "JUMP", last_name: "News", email: "dovern42@gmail.com", admin: true, verified: true, password: "Cheese")
+
+User.create(first_name: "Game", last_name: "Master", email: "quantum.feline@gmail.com", admin: false, verified: true, password: "password")
+
+User.create(first_name: "Rose", last_name: "Greenwood", email: "andyacantor@gmail.com", admin: false, verified: true, password: "password")
+
+User.create(first_name: "Kitty", last_name: "Crash", email: "thatgracejohnson@gmail.com", admin: false, verified: true, password: "password")
+
+User.create(first_name: "Ben", last_name: "Redwing", email: "Carolin.dithrich@gmail.com", admin: false, verified: true, password: "password")
+
+User.create(first_name: "Cecile", last_name: "Wren", email: "julia.ea.doolittle@gmail.com", admin: false, verified: true, password: "password")
+
+User.create(first_name: "Alexander", last_name: "Spencer-Pateras", email: "salleylr@gmail.com", admin: false, verified: true, password: "password")
+
 content = <<-TEXT
 
 <img src="/assets/tomei.jpg" alt="Marisa Tomei in My Cousin Vinny" />
