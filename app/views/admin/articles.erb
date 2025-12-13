@@ -25,8 +25,9 @@
         </td>
         <td>
              <% unless article.published %>
-                <%= button_to 'Click to Publish', "/articles/#{article.id}/publish", method: :post, class: 'publish-button', data: { turbo: false } %>
+                <%= button_to 'Click to Publish', "/articles/#{article.id}/publish", method: :post, class: 'publish-button', data: { turbo: false } %><br/>
             <% end %>
+            <%= button_to 'Edit', "/articles/#{article.id}/edit", method: :get, class: 'edit-button publish-button' %>
         </td>
     </tr>
     <% end %>

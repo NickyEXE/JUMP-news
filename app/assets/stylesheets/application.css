@@ -335,20 +335,20 @@ content.hp a {
   padding-top: 1em;
 }
 
-.user-form-container {
+.user-form-container, .article-form-container {
   max-width: 500px;
   margin: 0 auto;
   font-family: 'Typewriter', serif;
 }
 
-.user-form-container h1 {
+.user-form-container h1, .article-form-container h1 {
   font-family: 'Typewriter', serif;
   font-weight: 700;
   font-size: 2em;
   margin-bottom: 0.5em;
 }
 
-.user-form-container h2 {
+.user-form-container h2, .article-form-container h2 {
   font-family: 'Typewriter', serif;
   font-weight: 500;
   font-size: 1.2em;
@@ -356,11 +356,11 @@ content.hp a {
   color: #333;
 }
 
-#user-form > div {
+#user-form > div, #article-form > div {
   margin-bottom: 1.5em;
 }
 
-#user-form label {
+#user-form label, #article-form label {
   display: block;
   font-family: 'Typewriter', serif;
   font-weight: 600;
@@ -371,7 +371,11 @@ content.hp a {
 
 #user-form input[type="text"],
 #user-form input[type="email"],
-#user-form input[type="password"] {
+#user-form input[type="password"],
+#article-form input[type="text"],
+#article-form input[type="email"],
+#article-form input[type="password"],
+#article-form textarea {
   width: 100%;
   padding: 0.75em;
   font-family: 'Typewriter', serif;
@@ -391,12 +395,17 @@ a.admin-link {
 }
 
 #user-form input[type="text"]:focus,
-#user-form input[type="email"]:focus {
+#user-form input[type="email"]:focus,
+#user-form input[type="password"]:focus,
+#article-form input[type="text"]:focus,
+#article-form input[type="email"]:focus,
+#article-form input[type="password"]:focus,
+#article-form textarea:focus {
   outline: none;
   border-color: #000;
 }
 
-#user-form input[type="submit"], button, #main-nav > a, .welcome, .admin-link {
+#user-form input[type="submit"], button, #main-nav > a, .welcome, .admin-link, #article-form input[type="submit"] {
   width: 100%;
   padding: 1em;
   font-family: 'Typewriter', serif;
@@ -411,7 +420,7 @@ a.admin-link {
   margin-top: 1em;
 }
 
-#user-form input[type="submit"]:hover, button:hover {
+#user-form input[type="submit"]:hover, button:hover, #article-form input[type="submit"]:hover {
   background-color: #e4daca;
   color: #000;
   border-color: #000;
@@ -426,23 +435,12 @@ table {
   width: 100%;
 }
 
-#user-form .error-messages {
+#user-form .error-messages, #article-form .error-messages {
   background-color: #ff000020;
   border: 2px solid #ff0000;
   border-radius: 10px;
   padding: 1em;
   margin-bottom: 1.5em;
-}
-
-#user-form .error-messages h2 {
-  color: #ff0000;
-  font-size: 1.1em;
-  margin-top: 0;
-}
-
-#user-form .error-messages ul {
-  margin: 0.5em 0 0 1.5em;
-  color: #ff0000;
 }
 
 .admin-status {
@@ -626,4 +624,16 @@ table td, th {
 }
 table td * {
   margin: auto 0;
+}
+
+#article-form .field input[type="text"] {
+  height: 4em;
+}
+
+#article_content {
+  height: 80vh;
+}
+
+#article_blurb {
+  height: 6em;
 }

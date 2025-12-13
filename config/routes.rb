@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   get "/admin/articles", to: "admin#articles", as: :admin_articles
   get "/admin/users", to: "admin#users", as: :admin_users
   post "/articles/:id/publish", to: "articles#publish", as: :publish_article
+  get "/articles/:id/edit", to: "articles#edit", as: :edit_article
+  patch "/articles/:id", to: "articles#update", as: :update_article
+  resources :articles, only: [:index, :new, :create]
   get "articles/:stub", to: "articles#show", as: :article
-  get "articles", to: "articles#index", as: :articles
-  
+
+
   # Email previews in development
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   
